@@ -1,0 +1,160 @@
+/* static/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1, h2 {
+    color: #1a2c50;
+}
+
+/* Halaman Utama */
+.video-container {
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: #eee;
+}
+
+#video_feed {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.status-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    transition: background-color 0.3s ease;
+}
+.status-box.waiting { background-color: #fffbe6; border: 1px solid #ffe58f; }
+.status-box.active { background-color: #e6f7ff; border: 1px solid #91d5ff; }
+.status-box.success { background-color: #f6ffed; border: 1px solid #b7eb8f; }
+.status-box p { margin: 0.5rem 0; font-size: 1.1rem; }
+.status-box .hidden { display: none; }
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button, .button-link {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover, .button-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+#reset-button {
+    background-color: #dc3545;
+}
+#reset-button:hover {
+    background-color: #c82333;
+}
+.back-link {
+    display: block;
+    margin-top: 2rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Halaman Register */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.form-group input, .form-group select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+.capture-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+#video-capture {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#response-message {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* Halaman Laporan */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+th {
+    background-color: #007bff;
+    color: white;
+}
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
